@@ -1,0 +1,69 @@
+.flex-row{      //general flex row rule
+    display: flex;
+    flex-flow: row wrap;
+}
+.flex-column{   //general flex column rule
+    display: flex;
+    flex-flow: column wrap;
+}
+header{
+    position: static;
+    top: 0;
+    top: 0em;
+    background-color: darkred;
+    width: 100%;
+    height: 8em;
+    
+}
+.logo-header{
+    margin-top: 3em;
+    margin-left: 3em;
+}
+nav{        //applied flex row rule
+    background-color: black;
+    width: 100%;
+    height: auto;
+}
+ul{
+    margin: auto;
+}
+li{
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+    display: inline;
+    align-items: center;
+    color: white;
+    font-size: x-large;
+}
+article{
+    background-color: grey;
+}
+section{    //applied flex row rule
+    background-color: lightblue;
+    margin-top: 1em;            //gap to the header
+    margin-bottom: 2em;         //gap to the next section
+    justify-content: space-around;
+}
+.section-title{
+    background-color: bisque;
+    width: 100%;
+}
+.article-card{  //applied flex column rule
+    background-color: red;
+    justify-content: center;
+    width: 15em;
+    height: auto;
+}
+.article-card-img{  //image size for small display
+    width: 13em;
+    height: auto;
+}
+.article-card-text{     //text alginmet of the article cards
+    background-color: black;
+    color: white;      
+    text-align: center;
+    margin-top: 0;      //it should be right below the image
+}
+footer{
+    background-color: aquamarine;
+}
