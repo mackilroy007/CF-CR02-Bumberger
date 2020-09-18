@@ -20,7 +20,7 @@
 
 @media screen and (max-width: 480px) {
   .hide-phone {
-    display: none;
+    display: none !important;
   }
   header {
     position: static;
@@ -76,6 +76,7 @@
   }
   .article-card-img {
     width: 13em;
+    height: 10em;
     height: auto;
   }
   .article-card-text {
@@ -95,7 +96,7 @@
   }
 }
 
-@media screen and (min-width: 481px) and (max-width: 639px) {
+@media screen and (min-width: 481px) and (max-width: 790px) {
   .hide-tablet {
     display: none;
   }
@@ -144,7 +145,7 @@
     background-color: bisque;
     width: 100%;
     margin-left: 1em;
-    font-size: x-large;
+    font-size: xx-large;
   }
   .article-card {
     background-color: red;
@@ -185,7 +186,7 @@
   }
 }
 
-@media screen and (min-width: 640px) and (max-width: 1200px) {
+@media screen and (min-width: 791px) and (max-width: 1200px) {
   .hide-tablet {
     display: none;
   }
@@ -234,7 +235,7 @@
     background-color: bisque;
     width: 100%;
     margin-left: 1em;
-    font-size: x-large;
+    font-size: xx-large;
   }
   .article-card {
     background-color: red;

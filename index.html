@@ -11,7 +11,10 @@
 <body>
     <header>
         <img src="img/logo-newspaper-cf.png" alt="Logo" class="logo-header1">
-        <img src="/img/banner-1.png" alt="Advertisment" id="logo-header2" class="hide-phone, hide-tablet">
+        <div class="hide-phone, hide-tablet"> <!--need to put the header2 in a div for it to become hidden-->
+            <img src="/img/banner-1.png" alt="Advertisment" class="hide-phone, hide-tablet">
+        </div>
+        
     </header>
     <nav class="flex-row">
         <ul>
@@ -64,9 +67,9 @@
                     <h3 class="article-card-text">Is Elon Musk<br> a lizard person?</h3>
                 </div>
                 <div class="article-card, flex-column">
-                    <a href="https://www.codefactory.wien">
+                    <a href="https://www.codefactory.wien" >
                         <!--CodeFactory inbuilt ad-->
-                        <img src="img/banner-mobile-cf.png" alt="Advertisment" class="article-card-img, hide-tablet">
+                        <img src="img/banner-mobile-cf.png" alt="Advertisment" class="article-card-img, hide-tablet, hide-monitor">
                     </a>
                     <!--No text-->
                 </div>
@@ -99,9 +102,9 @@
 
             </section>
             <aside id="streched-comercial" class="hide-phone">
-                <div class="article-card, flex-column, hide-phone">
+                <div class="article-card, flex-column, hide-phone, hide-tablet">
                     <!--will be hidden for phones-->
-                    <a href="https://www.codefactory.wien">
+                    <a href="https://www.codefactory.wien" class="hide-tablet">
                         <img src="img/banner-4.png" alt="Advertisment" class="article-card-comercial">
                     </a>
             </aside>
