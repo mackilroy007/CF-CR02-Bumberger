@@ -1,3 +1,4 @@
+//repeating functions that are applied to multiple classes 
 .flex-row{      //general flex row rule
     display: flex;
     flex-flow: row wrap;
@@ -60,7 +61,14 @@
     .article-card-img{  //image size for small display
         width: 13em;
         height: 10em;   //needs to be defined for visual symetrie
-        height: auto;
+    }
+    #article-card-ad1{  //FSWD ad style
+        height: 12.5em;   //height and width need to be defined due to style 
+        width: 13em;
+    }
+    #article-card-ad2{  //CF ad style
+        height: 12.5em;   //height and width need to be defined due to style
+        width: 13em;
     }
     .article-card-text{     //text alginmet of the article cards
         background-color: black;
@@ -69,7 +77,7 @@
         margin-top: 0;      //it should be right below the image
     }
     footer{ 
-        background-color: orange;
+        background-color: black;
         text-align: center;
         color: white;
     }
@@ -78,7 +86,7 @@
         margin: 0 auto; 
     }
 }
-@media screen and (min-width: 481px) and (max-width: 790px){
+@media screen and (min-width: 481px) and (max-width: 879px){
     //small tablets and smartphones with rotated viewport
     .hide-tablet{
         display: none;
@@ -156,7 +164,7 @@
         font-size: x-large; //smaller font then on top
     }
     footer{ 
-        background-color: orange;
+        background-color: black;
         text-align: center;     //center text
         color: white;
     }
@@ -165,9 +173,9 @@
         margin: 0 auto; 
     }
 }
-@media screen and (min-width: 791px) and (max-width: 1200px){
+@media screen and (min-width: 880px) and (max-width: 1090px){
     //big tablets, small and medium  monitors
-    .hide-tablet{
+    .hide-monitor{  //hidden on monitors and big tablets
         display: none;
     }
     header{
@@ -182,6 +190,12 @@
         margin-top: 3em;
         margin-left: 3em;
         scale: 120%;    //larger for bigger screen
+    }
+    .logo-header2{  //second image in the header
+        position: relative; //positioning the image on the top right corner
+        float: right;
+        margin-right: 3em;
+        bottom: 3em;
     }
     nav{        //applied flex row rule
         background-color: black;
@@ -222,7 +236,7 @@
     }
     .article-card-img{  //image size for small display
         width: 18em;    //increase from 15 to 18
-        height: auto;
+        height: 12em;   //needs to be defined for it not be distorted
     }
     .article-card-text{     //text alginmet of the article cards
         background-color: black;
@@ -260,7 +274,7 @@
         font-size: x-large; //smaller font then on top
     }
     footer{
-        background-color: orange;
+        background-color: black;
         text-align: center;     //center text
         color: white;
     }
@@ -268,4 +282,115 @@
         display: block;
         margin: 0 auto; 
     }
+}
+@media screen and (min-width: 1091px){
+    //big monitors, tv screens and projectors 
+    .hide-monitor{ //hidden on monitors and big tablets
+        display: none;
+    }
+    header{
+        position: static;
+        top: 0;
+        top: 0em;
+        background-color: darkred;
+        width: 100%;
+        height: 10em;    //increase to 10em from 8em
+    }
+    .logo-header1{
+        margin-top: 3em;
+        margin-left: 3em;
+        scale: 120%;    //larger for bigger screen
+    }
+    .logo-header2{  //first time being displayed
+        position: relative; //positioning the image on the top right corner
+        float: right;
+        margin-right: 3em;  //distance to the right
+        bottom: 3em;
+    }
+    nav{        //applied flex row rule
+        background-color: black;
+        width: 100%;
+        height: auto;
+    }
+    ul{
+        margin: auto;
+    }
+    li{
+        margin-left: 0.2em;
+        margin-right: 0.2em;
+        display: inline;
+        align-items: center;
+        color: white;
+        font-size: xxx-large;    //increse size for tablet from xxl to xxxl
+    }
+    article{
+        background-color: grey;
+    }
+    section{    //applied flex row rule
+        background-color: lightblue;
+        margin-top: 1em;            //gap to the header
+        margin-bottom: 2em;         //gap to the next section
+        justify-content: space-around;
+    }
+    .section-title{
+        background-color: bisque;
+        width: 100%;
+        margin-left: 1em;       //increase size on the left
+        font-size: xx-large;     //increase text size for bigger tablet 
+    }
+    .article-card{  //applied flex column rule
+        background-color: red;
+        justify-content: center;
+        width: 25em;    //increase from 15 to 20 to 25
+        height: auto;
+    }
+    .article-card-img{  //image size for small display
+        width: 20em;    //increase from 15 to 18 to 20
+        height: 15em;   //needs to be defined for it not be distorted
+    }
+    .article-card-text{     //text alginmet of the article cards
+        background-color: black;
+        color: white;      
+        text-align: center;
+        margin-top: 0;      //it should be right below the image
+    }
+    #flex-tablet-screen{ //shrinks the flex size to fit the comercial next to it
+        width: 80%;     //80% of the screen is for the flexbox, the remaining 20 for the Ad
+    }
+    #streched-comercial{ //positioning of the comercial next to the flexbox
+        position: relative;
+        bottom: 34em;
+        width: 15%;
+        float: right;
+    }
+    #comercial{    //needs to have an id to override the hide-phone confict
+        //should display from > 480px
+        width: auto;
+        height: 5em;
+    }
+    .comercial-img{     //margin does not change position of the image
+        width: 70%;     //needs to be scaled down as the image gets over streched
+        max-height: 6em;    
+        margin: auto 9em;
+    }
+    aside{
+        display: block;
+        width: 30%;
+        padding-left: 1em;
+        margin-left: 1em;
+        float: right;
+        background-color: red;
+    }
+    nav > ul, li{   //design requirement
+        font-size: x-large; //smaller font then on top
+    }
+    footer{
+        background-color: black;
+        text-align: center;     //center text
+        color: white;
+    }
+    .logo-footer{   //center image
+        display: block;
+        margin: 0 auto; 
+    }  
 }
