@@ -7,21 +7,30 @@
     display: flex;
     flex-flow: column wrap;
 }
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+article{    //important for the article page
+    margin: auto 1em;
+}
 @media screen and (max-width: 480px) {
     .hide-phone{//should not display on small screens < 480px
-        display: none !important;
+        display: none;
     }
     header{
         position: static;
         top: 0;
         top: 0em;
-        background-color: darkred;
+        background-color: #5e1224;  //dark wine red
         width: 100%;
         height: 8em;
     }
     .logo-header1{
         margin-top: 3em;
         margin-left: 3em;
+    }
+    .logo-header2{
+        display: none;
     }
     nav{        //applied flex row rule
         background-color: black;
@@ -39,18 +48,17 @@
         color: white;
         font-size: x-large;
     }
-    article{
-        background-color: grey;
-    }
     section{    //applied flex row rule
-        background-color: lightblue;
         margin-top: 1em;            //gap to the header
         margin-bottom: 2em;         //gap to the next section
         justify-content: space-around;
     }
     .section-title{
-        background-color: bisque;
+        background-color: gray;
         width: 100%;
+    }
+    .section-title > h1{
+        margin-left: 0.5em;
     }
     .article-card{  //applied flex column rule
         background-color: red;
@@ -95,7 +103,7 @@
         position: static;
         top: 0;
         top: 0em;
-        background-color: darkred;
+        background-color: #5e1224;  //dark wine red
         width: 100%;
         height: 8em;
     }
@@ -120,30 +128,28 @@
         color: white;
         font-size: xx-large;    //increse size for tablet from xl to xxl
     }
-    article{
-        background-color: grey;
-    }
     section{    //applied flex row rule
-        background-color: lightblue;
         margin-top: 1em;            //gap to the header
         margin-bottom: 2em;         //gap to the next section
         justify-content: space-around;
     }
     .section-title{
-        background-color: bisque;
+        background-color: gray;
         width: 100%;
         margin-left: 1em;       //increase size on the left
         font-size: xx-large;     //increase text size for tablet 
     }
+    .section-title > h1{
+        margin-left: 0.5em;
+    }
     .article-card{  //applied flex column rule
-        background-color: red;
         justify-content: center;
         width: 20em;    //increase from 15 to 20
         height: auto;
     }
     .article-card-img{  //image size for small display
         width: 18em;    //increase from 15 to 18
-        height: auto;
+        height: 12em;
     }
     .article-card-text{     //text alginmet of the article cards
         background-color: black;
@@ -151,9 +157,16 @@
         text-align: center;
         margin-top: 0;      //it should be right below the image
     }
+    #article-card-ad1 { //needs to be difined for page symmetry
+        height: 14.8em;
+        width: 18em;
+    }
+    #article-card-ad2 { //needs to be difined for page symmetry
+        height: 15.1em;
+        width: 18em;
+    }
     #comercial{    //needs to have an id to override the hide-phone confict
         //should display from > 480px
-        
         width: auto;
         height: 5em;
     }
@@ -182,7 +195,7 @@
         position: static;
         top: 0;
         top: 0em;
-        background-color: darkred;
+        background-color: #5e1224;  //dark wine red
         width: 100%;
         height: 10em;    //increase to 10em from 8em
     }
@@ -201,6 +214,8 @@
         background-color: black;
         width: 100%;
         height: auto;
+        position: relative; //nav bar seems to move down due to scaling and needs to be repositioned
+        bottom: 1em;
     }
     ul{
         margin: auto;
@@ -213,30 +228,35 @@
         color: white;
         font-size: xxx-large;    //increse size for tablet from xxl to xxxl
     }
-    article{
-        background-color: grey;
+    #date{  //displays date, not dynamik
+        font-size: medium;
+        float: right;
+        margin-right: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
     section{    //applied flex row rule
-        background-color: lightblue;
         margin-top: 1em;            //gap to the header
         margin-bottom: 2em;         //gap to the next section
         justify-content: space-around;
     }
     .section-title{
-        background-color: bisque;
+        background-color: grey;
         width: 100%;
         margin-left: 1em;       //increase size on the left
         font-size: xx-large;     //increase text size for bigger tablet 
     }
+    .section-title > h1{
+        margin-left: 0.5em;
+    }
     .article-card{  //applied flex column rule
-        background-color: red;
-        justify-content: center;
+       justify-content: center;
         width: 20em;    //increase from 15 to 20
         height: auto;
     }
     .article-card-img{  //image size for small display
         width: 18em;    //increase from 15 to 18
-        height: 12em;   //needs to be defined for it not be distorted
+        height: 13em;   //needs to be defined for it not be distorted
     }
     .article-card-text{     //text alginmet of the article cards
         background-color: black;
@@ -268,7 +288,6 @@
         padding-left: 1em;
         margin-left: 1em;
         float: right;
-        background-color: red;
     }
     nav > ul, li{   //design requirement
         font-size: x-large; //smaller font then on top
@@ -292,7 +311,7 @@
         position: static;
         top: 0;
         top: 0em;
-        background-color: darkred;
+        background-color: #5e1224;  //dark wine red
         width: 100%;
         height: 10em;    //increase to 10em from 8em
     }
@@ -311,6 +330,8 @@
         background-color: black;
         width: 100%;
         height: auto;
+        position: relative; //nav bar seems to move down due to scaling and needs to be repositioned
+        bottom: 1em;
     }
     ul{
         margin: auto;
@@ -323,23 +344,28 @@
         color: white;
         font-size: xxx-large;    //increse size for tablet from xxl to xxxl
     }
-    article{
-        background-color: grey;
+    #date{      //displays date, not dynamik
+        font-size: medium;
+        float: right;
+        margin-right: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
     section{    //applied flex row rule
-        background-color: lightblue;
         margin-top: 1em;            //gap to the header
         margin-bottom: 2em;         //gap to the next section
         justify-content: space-around;
     }
     .section-title{
-        background-color: bisque;
+        background-color: grey;
         width: 100%;
         margin-left: 1em;       //increase size on the left
         font-size: xx-large;     //increase text size for bigger tablet 
     }
+    .section-title > h1{
+        margin-left: 0.5em;
+    }
     .article-card{  //applied flex column rule
-        background-color: red;
         justify-content: center;
         width: 25em;    //increase from 15 to 20 to 25
         height: auto;
@@ -379,8 +405,7 @@
         padding-left: 1em;
         margin-left: 1em;
         float: right;
-        background-color: red;
-    }
+        }
     nav > ul, li{   //design requirement
         font-size: x-large; //smaller font then on top
     }

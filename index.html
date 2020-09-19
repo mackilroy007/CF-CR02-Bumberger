@@ -4,48 +4,67 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!--font still missing-->
-    <title>CodeChallenge 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>CodeChallenge 2 main page</title>
 </head>
 
 <body>
     <header>
         <img src="img/logo-newspaper-cf.png" alt="Logo" class="logo-header1">
-        <div class="hide-phone, hide-tablet"> <!--need to put the header2 in a div for it to become hidden-->
-            <img src="/img/banner-1.png" alt="Advertisment" id="logo-ad" class="hide-phone, hide-tablet, logo-header2">
+        <div class="hide-phone, hide-tablet">
+            <!--header2 needs to be in a div for it to become hidden-->
+            <a href="https://www.codefactory.wien">
+                <!--picture and text are both links to the article page-->
+                <img src="img/banner-1.png" alt="Advertisment" id="logo-ad"
+                    class="hide-phone, hide-tablet, logo-header2">
+            </a>
         </div>
-        
     </header>
     <nav class="flex-row">
         <ul>
-            <li>Home</li>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
             <li>Tech</li>
             <li>Culture</li>
             <li>Video</li>
         </ul>
     </nav>
+    <div id="date" class="hide-phone, hide-tablet">
+        <p>Saturday, 19:09.2020</p>
+    </div>
     <main>
         <article>
             <div class="section-title">
                 <h1>Top News</h1>
             </div>
             <section class="section-1, flex-row">
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/jeff.png" alt="Amazon CEO" class="article-card-img">
+                        <h3 class="article-card-text">Lex Luthor or the <br> boy next door?</h3>
+                    </div>
+                </a>
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/eu.png" alt="Lock" class="article-card-img">
+                        <h3 class="article-card-text">10 ways to keep your <br> files safe</h3>
+                    </div>
+                </a>
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/phone.png" alt="Spotify on smartphone" class="article-card-img">
+                        <h4 class="article-card-text">Spotify raises limit<br>of offline users</h4>
+                    </div>
+                </a>
                 <div class="article-card, flex-column">
-                    <img src="img/jeff.png" alt="Amazon CEO" class="article-card-img">
-                    <h3 class="article-card-text">Lex Luthor or the <br> boy next door?</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <img src="img/eu.png" alt="Lock" class="article-card-img">
-                    <h3 class="article-card-text">10 ways to keep your <br> files safe</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <img src="img/phone.png" alt="Spotify on smartphone" class="article-card-img">
-                    <h4 class="article-card-text">Spotify raises limit<br>of offline users</h4>
-                </div>
-                <div class="article-card, flex-column, hide-tablet">
                     <a href="https://www.codefactory.wien">
                         <!--CodeFactory inbuilt ad-->
-                        <img src="img/banner-mobile-fswd.png" alt="Advertisment" id="article-card-ad1" class="article-card-img, hide-monitor">
+                        <img src="img/banner-mobile-fswd.png" alt="Advertisment" id="article-card-ad1"
+                            class="article-card-img, hide-monitor">
                     </a>
                     <!--No text-->
                 </div>
@@ -54,22 +73,32 @@
                 <h1>Popular</h1>
             </div>
             <section class="section-2, flex-row">
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/iphone.png" alt="Iphone" class="article-card-img">
+                        <h3 class="article-card-text">All the reasons to avoid<br>purchasing an Iphone</h3>
+                    </div>
+                </a>
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/one.png" alt="OnePlus earphones" class="article-card-img">
+                        <h3 class="article-card-text">OnePlus announces <br>new earphones</h3>
+                    </div>
+                </a>
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/musk.jpg" alt="Elon Musk high on Canabis" class="article-card-img">
+                        <h3 class="article-card-text">Is Elon Musk<br> a lizard person?</h3>
+                    </div>
+                </a>
                 <div class="article-card, flex-column">
-                    <img src="img/iphone.png" alt="Iphone" class="article-card-img">
-                    <h3 class="article-card-text">All the reasons to avoid<br>purchasing an Iphone</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <img src="img/one.png" alt="OnePlus earphones" class="article-card-img">
-                    <h3 class="article-card-text">OnePlus announces new<br>Solar-powered earphones</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <img src="img/musk.jpg" alt="Elon Musk high on Canabis" class="article-card-img">
-                    <h3 class="article-card-text">Is Elon Musk<br> a lizard person?</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <a href="https://www.codefactory.wien"  >
+                    <a href="https://www.codefactory.wien">
                         <!--CodeFactory inbuilt ad-->
-                        <img src="img/banner-mobile-cf.png" alt="Advertisment" id="article-card-ad2" class="article-card-img, hide-tablet, hide-monitor">
+                        <img src="img/banner-mobile-cf.png" alt="Advertisment" id="article-card-ad2"
+                            class="article-card-img, hide-tablet, hide-monitor">
                     </a>
                     <!--No text-->
                 </div>
@@ -78,28 +107,40 @@
         <br>
         <div id="comercial" class="hide-phone">
             <!--CodeFactory inbuilt ad-->
-            <a href="https://www.codefactory.wien"><img src="/img/banner-3.png" alt="Advertisment"
+            <a href="https://www.codefactory.wien"><img src="img/banner-3.png" alt="Advertisment"
                     class="comercial-img"></a>
         </div>
         <br>
         <article>
             <section class="section-3, flex-row" id="flex-tablet-screen">
-                <div class="article-card, flex-column">
-                    <img src="img/polar.png" alt="Polar watches" class="article-card-img">
-                    <h3 class="article-card-text">Polar's watches<br>with 4 hour battery life</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <img src="img/nasa.png" alt="ISS space station" class="article-card-img">
-                    <h3 class="article-card-text">Nasa to use the ISS<br>for the next 10 years</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <img src="img/smart.png" alt="extention cable" class="article-card-img">
-                    <h3 class="article-card-text">Great deals on<br>Amazon Prime</h3>
-                </div>
-                <div class="article-card, flex-column">
-                    <img src="img/snowden.jpg" alt="display with code" class="article-card-img">
-                    <h3 class="article-card-text">NSA leak!<br>Who was it this time?</h3>
-
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/polar.png" alt="Polar watches" class="article-card-img">
+                        <h3 class="article-card-text">Polar's watches<br>with 4 hour battery life</h3>
+                    </div>
+                </a>
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/nasa.png" alt="ISS space station" class="article-card-img">
+                        <h3 class="article-card-text">Nasa to use the ISS<br>for the next 10 years</h3>
+                    </div>
+                </a>
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/smart.png" alt="extention cable" class="article-card-img">
+                        <h3 class="article-card-text">Great deals on<br>Amazon Prime</h3>
+                    </div>
+                </a>
+                <a href="article.html">
+                    <!--picture and text are both links to the article page-->
+                    <div class="article-card, flex-column">
+                        <img src="img/snowden.jpg" alt="display with code" class="article-card-img">
+                        <h3 class="article-card-text">NSA leak!<br>Who was it this time?</h3>
+                    </div>
+                </a>
             </section>
             <aside id="streched-comercial" class="hide-phone">
                 <div class="article-card, flex-column, hide-phone, hide-tablet">
@@ -112,7 +153,9 @@
     </main>
     <nav class="flex-row, nav-footer">
         <ul>
-            <li>Home</li>
+            <a href="index.html">
+                <li>Home</li>
+            </a>
             <li>Tech</li>
             <li>Culture</li>
             <li>Video</li>
