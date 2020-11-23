@@ -8,7 +8,7 @@
     <title>CodeChallenge 2 main page</title>
 </head>
 
-<body>
+<body onload="startTime()">
     <header>
         <img src="img/logo-newspaper-cf.png" alt="Logo" class="logo-header1">
         <div class="hide-phone, hide-tablet">
@@ -31,7 +31,9 @@
         </ul>
     </nav>
     <div id="date" class="hide-phone, hide-tablet">
-        <p>Saturday, 19:09.2020</p>
+        <!-- <p>Saturday, 19:09.2020</p> -->
+        <!-- live time and date -->
+        <div id="txt"></div>
     </div>
     <main>
         <article>
@@ -169,6 +171,27 @@
     </footer>
     <script>
         console.log("Hello from the console :)")
+
+// live time
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var d = today.getDate();
+            var l = today.getMonth();
+            var y = today.getFullYear();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s + " " + d + "." + l + "." + y;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+
     </script>
 </body>
 
