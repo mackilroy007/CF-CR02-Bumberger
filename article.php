@@ -17,7 +17,9 @@
         </div>
         <nav class="flex-row">
             <ul>
-                <a href="index.html"><li>Home</li></a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
                 <li>Tech</li>
                 <li>Culture</li>
                 <li>Video</li>
@@ -69,9 +71,44 @@
                 </p>
             </section>
         </article>
-        <nav class="flex-row, nav-footer">
+        <div>
+            <h2>Weather forcast</h2>
+            <?php
+
+            $curl = curl_init();
+
+            curl_setopt_array($curl, [
+                CURLOPT_URL => "https://community-open-weather-map.p.rapidapi.com/weather/weather?q=London%2Cuk&lat=0&lon=0&callback=test&id=2172797&lang=null&units=%22metric%22%20or%20%22imperial%22&mode=xml%2C%20html",
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_FOLLOWLOCATION => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "GET",
+                CURLOPT_HTTPHEADER => [
+                    "x-rapidapi-host: community-open-weather-map.p.rapidapi.com",
+                    "x-rapidapi-key: df9cf892f5msh5e0a49124ce18a5p1e6274jsnded6c5b43eba"
+                ],
+            ]);
+
+            $response = curl_exec($curl);
+            $err = curl_error($curl);
+
+            curl_close($curl);
+
+            if ($err) {
+                echo "cURL Error #:" . $err;
+            } else {
+                echo $response;
+            }
+            ?>
+        </div>
+        <!-- <nav class="flex-row, nav-footer">
             <ul>
-                <a href="index.html"><li>Home</li></a>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
                 <li>Tech</li>
                 <li>Culture</li>
                 <li>Video</li>
@@ -84,7 +121,7 @@
             </footer>
             <script>
                 console.log("Hello from the console :)")
-            </script>
+            </script> -->
 </body>
 
 </html>
